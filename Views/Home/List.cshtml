@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SportsStore.Models.Product>
+
+    <h1>@ViewBag.StoreName</h1>
+    <p>@ViewBag.WelcomeMessage</p>
+    <p>@ViewBag.TaxRate</p>
+
+<h1>Product list</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <th>@product.Name</th>
+            <th>@product.Description</th>
+            <th>@product.Price</th>
+        </tr>
+    }
+</table>
